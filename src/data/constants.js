@@ -108,6 +108,11 @@ export const skills = [
         image:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519',
       },
+      {
+        name: 'Jira',
+        image:
+          'https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png'
+      },
     ],
   },
 ];
@@ -164,7 +169,7 @@ export const education = [
   {
     id: 1,
     img: 'https://www.sainiksatara.org/images/logo.jpg',
-    school: 'Methodist School, Dankuni',
+    school: 'Sainik School, Satara',
     date: '2009 - 2016',
     grade: '91%',
     desc: 'I completed my higher education at Sainik School, Satara, where I studied Science with Computer Application.',
