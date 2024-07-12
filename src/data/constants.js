@@ -2,7 +2,7 @@ export const Bio = {
   name: 'Ganesh Chincholkar',
   roles: ['Full Stack Developer', 'Backend Developer', 'Programmer'],
   description:
-    'I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.',
+    'm a passionate software developer specializing in JavaScript and Java, with extensive Node.js backend experience. I excel in creating scalable server-side applications and RESTful APIs. Skilled in SQL and NoSQL databases, I use ORMs for efficient data management. I integrate third-party services and implement secure authentication with OAuth and JWT. As a quick learner, I continuously explore new technologies to deliver high-quality, reliable solutions.',
   github: 'https://github.com/ganeshpc',
   resume:
     'https://drive.google.com/file/d/1-4tQTWYeJHh-N4Wl4Y56ZATVY7rpp_A8/view?usp=sharing',
@@ -111,7 +111,7 @@ export const skills = [
       {
         name: 'Jira',
         image:
-          'https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png'
+          'https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png',
       },
     ],
   },
