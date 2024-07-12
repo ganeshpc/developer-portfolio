@@ -2,7 +2,7 @@ export const Bio = {
   name: 'Ganesh Chincholkar',
   roles: ['Full Stack Developer', 'Backend Developer', 'Programmer'],
   description:
-    'm a passionate software developer specializing in JavaScript and Java, with extensive Node.js backend experience. I excel in creating scalable server-side applications and RESTful APIs. Skilled in SQL and NoSQL databases, I use ORMs for efficient data management. I integrate third-party services and implement secure authentication with OAuth and JWT. As a quick learner, I continuously explore new technologies to deliver high-quality, reliable solutions.',
+    'I\'m a passionate software developer specializing in JavaScript and Java, with extensive Node.js backend experience. I excel in creating scalable server-side applications and RESTful APIs. Skilled in SQL and NoSQL databases, I use ORMs for efficient data management. I integrate third-party services and implement secure authentication with OAuth and JWT. As a quick learner, I continuously explore new technologies to deliver high-quality, reliable solutions.',
   github: 'https://github.com/ganeshpc',
   resume:
     'https://drive.google.com/file/d/1-4tQTWYeJHh-N4Wl4Y56ZATVY7rpp_A8/view?usp=sharing',
