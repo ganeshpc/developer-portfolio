@@ -45,7 +45,7 @@ export default function AboutPage() {
                 interface matters, and it is not the whole job.
               </p>
               <p>
-                I have been doing that in industry since July 2021, and I keep a few
+                I have been doing that in industry since January 2021, and I keep a few
                 public projects where the design can be read directly. If a piece
                 is unfinished, the repository says so.
               </p>

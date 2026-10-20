@@ -1,5 +1,5 @@
 /** First month of professional work. Experience figures count completed years from here. */
-export const careerStart = { year: 2021, month: 7 } as const;
+export const careerStart = { year: 2021, month: 1 } as const;
 
 export const profile = {
   name: "Ganesh Chincholkar",
