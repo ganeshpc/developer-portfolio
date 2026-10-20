@@ -26,9 +26,8 @@ export function ContactSection() {
           Have an interesting problem? Let&apos;s talk.
         </h2>
         <p className="mt-5 max-w-xl text-base leading-7 text-secondary sm:text-lg">
-          {profile.email
-            ? "Email is the direct line. The other links are here if you would rather start there."
-            : "Email is not published on this site yet. LinkedIn and GitHub are the public ways to reach me."}
+          Feel free to reach out about engineering opportunities, collaboration,
+          or a technical problem worth talking through.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button

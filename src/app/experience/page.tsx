@@ -8,7 +8,7 @@ import { siteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Ganesh Chincholkar's experience at Siemens Industry Software and an internship at Inkoop.",
+    "Ganesh Chincholkar's roles at xAI, Citi, Siemens Industry Software, and Inkoop.",
   ...(siteUrl ? { alternates: { canonical: "/experience" } } : {}),
 };
 
@@ -23,9 +23,8 @@ export default function ExperiencePage() {
           My journey.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-7 text-secondary sm:text-lg">
-          Two roles. The notes below stay inside work I can describe directly.
-          There are no performance figures on this page because I am not going
-          to invent them.
+          Four roles, newest first. The notes follow the résumé. Where a
+          percentage appears, it is the figure printed there.
         </p>
         <div className="mt-8">
           <Button href={profile.resumeUrl} external icon="download">

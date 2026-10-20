@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { education, profile } from "@/data/profile";
+import { publicPath } from "@/lib/site";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -52,13 +53,13 @@ export default function AboutPage() {
             </div>
           </div>
           <figure className="lg:pt-10">
-            <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
+            <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-2xl">
               <Image
-                src="/images/workspace.jpg"
-                alt="A sunlit oak desk with a closed laptop, a notebook, a cup, and a small plant."
+                src={publicPath("/images/portrait.jpg")}
+                alt="Portrait of Ganesh Chincholkar."
                 fill
-                sizes="(min-width: 1024px) 480px, 100vw"
-                className="object-cover"
+                sizes="(min-width: 1024px) 420px, 100vw"
+                className="object-cover object-[center_15%]"
               />
             </div>
             <figcaption className="mt-3 text-sm text-secondary">
@@ -92,11 +93,11 @@ export default function AboutPage() {
           </h2>
           <div className="mt-4 space-y-4 text-base leading-7 text-secondary">
             <p>
-              Since July 2021 I have been an associate software engineer at
-              Siemens Industry Software, working on full-stack web applications
-              with Java, Spring Boot, Node.js, and React. Before that, from
-              January to June 2021, I interned at Inkoop on a Node.js, Vue, and
-              MongoDB application, including Stripe.
+              Most recently I was a fullstack engineering specialist at xAI, from
+              January to September 2026. Before that I was a Java fullstack
+              developer at Citi, a software engineer at Siemens Industry
+              Software from July 2021 to June 2025, and a fullstack intern at
+              Inkoop in the first half of 2021.
             </p>
             <p>
               {education.credential} at {education.school}, {education.period}.

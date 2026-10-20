@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { profile } from "@/data/profile";
 import { experienceSummary, getYearsOfExperience } from "@/lib/experience-years";
+import { publicPath } from "@/lib/site";
 import Image from "next/image";
 
 export async function HeroCopy() {
@@ -34,7 +35,7 @@ export function HeroPhoto() {
     <figure className="h-full">
       <div className="relative h-full min-h-[280px] overflow-hidden rounded-[28px] shadow-[0_18px_40px_rgba(15,23,42,0.1)] lg:min-h-[420px]">
         <Image
-          src="/images/ridge.jpg"
+          src={publicPath("/images/ridge.jpg")}
           alt="A person with a backpack sits on a ridge above a lake and forest at sunrise."
           fill
           priority

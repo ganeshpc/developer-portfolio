@@ -42,6 +42,7 @@ export type Role = {
   title: string;
   start: string;
   end: string;
+  location?: string;
   summary: string;
   contributions: string[];
 };

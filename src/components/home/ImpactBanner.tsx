@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getYearsOfExperience } from "@/lib/experience-years";
+import { publicPath } from "@/lib/site";
 
 export async function ImpactBanner() {
   const years = await getYearsOfExperience();
@@ -8,7 +9,7 @@ export async function ImpactBanner() {
   return (
     <section className="relative overflow-hidden rounded-[28px] text-white">
       <Image
-        src="/images/ridge.jpg"
+        src={publicPath("/images/ridge.jpg")}
         alt=""
         fill
         sizes="(min-width: 1024px) 720px, 100vw"

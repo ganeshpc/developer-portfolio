@@ -26,6 +26,12 @@ export function ExperienceList({
             </div>
             <p className="text-[13px] text-secondary sm:text-right">
               {role.start} – {role.end}
+              {role.location ? (
+                <>
+                  <span aria-hidden> · </span>
+                  {role.location}
+                </>
+              ) : null}
             </p>
           </div>
           {detailed ? (

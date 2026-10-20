@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { profile } from "@/data/profile";
+import { publicPath } from "@/lib/site";
 
 export function AboutPreview() {
   return (
@@ -27,11 +28,11 @@ export function AboutPreview() {
         </div>
         <div className="relative aspect-[4/3] overflow-hidden rounded-2xl sm:aspect-[3/4]">
           <Image
-            src="/images/workspace.jpg"
-            alt="A sunlit desk with a closed laptop, a notebook, a cup, and a plant."
+            src={publicPath("/images/portrait.jpg")}
+            alt="Portrait of Ganesh Chincholkar."
             fill
             sizes="180px"
-            className="object-cover"
+            className="object-cover object-[center_20%]"
           />
         </div>
       </div>
