@@ -15,9 +15,9 @@ export function AboutPreview() {
             A bit more about me.
           </h2>
           <p className="mt-3 text-sm leading-6 text-secondary">
-            I&apos;m a software engineer based in {profile.location}. I build
-            backend services and the products in front of them. The public
-            projects are where the design can be read directly.
+            I&apos;m a software engineer in {profile.location}. Recent work
+            includes coding data for model training at xAI, Spring Batch at
+            Citi, and a React 3D viewer plus PLMX file generation at Siemens.
           </p>
           <Link
             href="/about"

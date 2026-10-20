@@ -1,31 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { education, profile } from "@/data/profile";
-import { publicPath } from "@/lib/site";
-import { siteUrl } from "@/lib/site";
+import { coursework, education, profile, skillGroups } from "@/data/profile";
+import { publicPath, siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "How Ganesh Chincholkar approaches backend services, full-stack products, and the public projects on this site.",
+    "Ganesh Chincholkar is a software engineer in Pune. He has worked at xAI, Citi, Siemens Industry Software, and Inkoop.",
   ...(siteUrl ? { alternates: { canonical: "/about" } } : {}),
 };
-
-const interests = [
-  {
-    title: "APIs and data",
-    body: "The shape of a request, what gets stored, and what a caller can rely on the next day.",
-  },
-  {
-    title: "Failure between services",
-    body: "Queues, durable state, and a record of which step actually finished.",
-  },
-  {
-    title: "Shipping the result",
-    body: "Containers, builds, and the unglamorous path from a repository to a running page.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -41,14 +25,16 @@ export default function AboutPage() {
             </h1>
             <div className="mt-6 max-w-xl space-y-4 text-base leading-7 text-secondary sm:text-lg sm:leading-8">
               <p>
-                Most of my work is the server side of a product: the API, the
-                database, and the steps that have to agree with each other. The
-                interface matters, and it is not the whole job.
+                Most of my work is the server side of a product: batch jobs,
+                file services, REST APIs, and the data those APIs have to keep
+                straight. The interface matters, and it is not the whole job.
               </p>
               <p>
-                I have been doing that in industry since January 2021, and I keep a few
-                public projects where the design can be read directly. If a piece
-                is unfinished, the repository says so.
+                Since January 2021 that has meant a Vue product at Inkoop, four
+                years of full-stack product work at Siemens, Java batch systems
+                at Citi, and coding data for model training at xAI. Public
+                repositories are where a design can be read without a company
+                boundary.
               </p>
             </div>
           </div>
@@ -74,15 +60,25 @@ export default function AboutPage() {
           </h2>
           <div className="mt-4 space-y-4 text-base leading-7 text-secondary">
             <p>
-              I would rather make the state model obvious than add another
-              service. The workflow engine started as one process and Postgres
-              for that reason. Kafka showed up when there was a real handoff to
-              a worker, not before.
+              At Citi the batch migration was a framework problem: scheduling,
+              retries, and monitoring had to move off a licensed modeler and
+              onto Spring Batch without dropping the jobs that already ran.
+              The notification system was the same kind of problem at a smaller
+              scale. A failed send had to be retried, and a batch of failures
+              had to be reprocessed, or the message never reached the user.
             </p>
             <p>
-              The same preference shows up in Deployer. The request that starts
-              a build is not the process that runs it. Logs have their own store
-              because they are not the same data as an account.
+              At Siemens the 3D viewer and the PLMX file service had to agree
+              on what a file was and how fast it could be shown. A cache file
+              server sat beside that, because large uploads are not the same
+              traffic as a page of metadata. Docker and the Linux pipelines
+              were how those services actually shipped.
+            </p>
+            <p>
+              The public projects follow the same habit. The workflow engine
+              keeps PostgreSQL as the record of a saga and uses Kafka only when
+              a worker has to take the next step. Deployer does not build
+              inside the request that started the build.
             </p>
           </div>
         </section>
@@ -100,7 +96,9 @@ export default function AboutPage() {
               Inkoop in the first half of 2021.
             </p>
             <p>
-              {education.credential} at {education.school}, {education.period}.
+              {education.credential} at {education.school}, {education.period},
+              in {profile.location}. Coursework included{" "}
+              {coursework.slice(0, -1).join(", ")}, and {coursework.at(-1)}.
             </p>
           </div>
           <Link
@@ -113,13 +111,19 @@ export default function AboutPage() {
 
         <section className="mt-16">
           <h2 className="text-2xl font-medium tracking-[-0.02em] text-text">
-            Interests
+            Technical skills
           </h2>
-          <ul className="mt-6 grid gap-8 sm:grid-cols-3">
-            {interests.map((item) => (
-              <li key={item.title} className="border-t border-border pt-4">
-                <h3 className="text-base font-medium text-text">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-secondary">{item.body}</p>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-secondary">
+            The groups below are the ones on the résumé. The last group is
+            tools named in the role descriptions rather than in that list.
+          </p>
+          <ul className="mt-6 grid gap-8 sm:grid-cols-2">
+            {skillGroups.map((group) => (
+              <li key={group.title} className="border-t border-border pt-4">
+                <h3 className="text-base font-medium text-text">{group.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-secondary">
+                  {group.items.join(", ")}
+                </p>
               </li>
             ))}
           </ul>

@@ -27,22 +27,55 @@ export const education = {
 export const capabilities = [
   {
     title: "Backend & APIs",
-    description: "Services, data, and the contracts between them.",
+    description:
+      "Java and Spring Boot services, Spring Batch, and REST APIs in Node.js.",
     icon: "server",
   },
   {
     title: "Full-stack development",
-    description: "Interfaces and the services behind them.",
+    description:
+      "React and Vue interfaces on those services, including 3D viewing and data visualization.",
     icon: "layers",
   },
   {
     title: "Cloud & DevOps",
-    description: "Containers, builds, and cloud storage.",
+    description:
+      "Docker, CI/CD on Linux, and file services for large uploads and downloads.",
     icon: "cloud",
   },
   {
     title: "Distributed systems",
-    description: "Queues, durable state, and recovery.",
+    description:
+      "Batch jobs, BullMQ, retries, and notification flows that have to survive a failure.",
     icon: "workflow",
   },
+] as const;
+
+/** Skill groups as printed on the October 2026 résumé. */
+export const skillGroups = [
+  {
+    title: "Languages",
+    items: ["Java", "JavaScript", "TypeScript", "Python"],
+  },
+  {
+    title: "Frameworks",
+    items: ["Spring Boot", "React", "Express", "NestJS"],
+  },
+  {
+    title: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase"],
+  },
+  {
+    title: "From the roles",
+    items: ["Spring Batch", "Docker", "Jest", "BullMQ", "Vue", "Stripe"],
+  },
+] as const;
+
+export const coursework = [
+  "Data Structures and Algorithms",
+  "Object Oriented Programming",
+  "Advanced Data Structures",
+  "Database Management Systems",
+  "System Design",
+  "Engineering Mathematics",
 ] as const;

@@ -43,6 +43,7 @@ export type Role = {
   start: string;
   end: string;
   location?: string;
+  logo: string;
   summary: string;
   contributions: string[];
 };
