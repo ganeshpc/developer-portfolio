@@ -30,9 +30,11 @@ Set `NEXT_PUBLIC_SITE_URL` when the production domain is known. Until then, page
 
 ## Publish
 
-GitHub stores the code. It does not run this Next.js app by itself. GitHub Pages only serves static files, and this site is built to run with `next start` (image optimization, the Open Graph image, and the experience-year cache).
+`npm run build` is the normal Next.js build. `npm run build:pages` writes a static `out/` folder for GitHub Pages, with image optimization turned off for that build only. Pushing to `master` runs `.github/workflows/pages.yml` and publishes:
 
-The straightforward way to publish from this repository is [Vercel](https://vercel.com):
+https://ganeshpc.github.io/developer-portfolio/
+
+The straightforward way to publish the full Next.js build from this repository is [Vercel](https://vercel.com):
 
 1. Sign in with GitHub and import `ganeshpc/developer-portfolio`.
 2. Leave the framework preset on Next.js. The build command is `npm run build`.
