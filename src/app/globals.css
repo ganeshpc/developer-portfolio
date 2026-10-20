@@ -3,32 +3,36 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --page: #f3f5f8;
+  --page: #f7f6f4;
   --surface: #ffffff;
-  --surface-secondary: #f1f5f9;
-  --text: #111827;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --border: #e2e8f0;
+  --surface-secondary: #f3f4f6;
+  --text: #12171e;
+  --text-secondary: #55606c;
+  --text-muted: #66707c;
+  --headline-muted: #5e656e;
+  --border: #e6e8ec;
   --accent: #2563eb;
-  --accent-subtle: #eff6ff;
-  --button: #111827;
+  --accent-subtle: #e8f1fb;
+  --icon: #4d86d4;
+  --button: #1c2430;
   --button-text: #f8fafc;
   color-scheme: light;
 }
 
 .dark {
-  --page: #0b0f19;
-  --surface: #111827;
-  --surface-secondary: #182131;
-  --text: #f1f5f9;
-  --text-secondary: #a7b3c5;
-  --text-muted: #8290a5;
-  --border: #273449;
-  --accent: #60a5fa;
-  --accent-subtle: #17243a;
-  --button: #f1f5f9;
-  --button-text: #0b0f19;
+  --page: #0e131a;
+  --surface: #151c26;
+  --surface-secondary: #1c2531;
+  --text: #f4f6f8;
+  --text-secondary: #a9b4c2;
+  --text-muted: #9aa6b5;
+  --headline-muted: #a3acb6;
+  --border: #2a3442;
+  --accent: #7aa2ff;
+  --accent-subtle: #1a2940;
+  --icon: #9ebef5;
+  --button: #f4f6f8;
+  --button-text: #10151c;
   color-scheme: dark;
 }
 
@@ -39,15 +43,16 @@
   --color-text: var(--text);
   --color-secondary: var(--text-secondary);
   --color-muted: var(--text-muted);
+  --color-headline-muted: var(--headline-muted);
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-subtle: var(--accent-subtle);
+  --color-icon: var(--icon);
   --color-button: var(--button);
   --color-button-text: var(--button-text);
-  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-sans: var(--font-sans-face), -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
-  --font-script: var(--font-caveat), cursive;
+  --font-script: var(--font-caveat), "Segoe Script", cursive;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
@@ -59,6 +64,7 @@ body {
   background: var(--page);
   color: var(--text);
   font-family: var(--font-sans);
+  overflow-x: clip;
   text-rendering: optimizeLegibility;
 }
 
@@ -74,13 +80,39 @@ body {
 
 .page-wrap {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1120px;
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
 
 .section {
-  padding-block: 4rem;
+  padding-block: 2.75rem 4rem;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero-kicker {
+  display: inline;
+}
+
+@media (width >= 64rem) {
+  .hero-kicker {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+.page-title {
+  font-size: clamp(2.15rem, 3vw, 3.15rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
 }
 
 .skip-link {
@@ -102,21 +134,21 @@ body {
 
 @media (width >= 40rem) {
   .page-wrap {
-    padding-inline: 2rem;
+    padding-inline: 1.75rem;
   }
 
   .section {
-    padding-block: 5.5rem;
+    padding-block: 3.25rem 4.5rem;
   }
 }
 
 @media (width >= 64rem) {
   .page-wrap {
-    padding-inline: 3rem;
+    padding-inline: 2rem;
   }
 
   .section {
-    padding-block: 7.5rem;
+    padding-block: 3.5rem 5.5rem;
   }
 }
 

@@ -14,10 +14,10 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/80 bg-page">
+    <header className="sticky top-0 z-40 bg-page/90 backdrop-blur-md">
       <div className="page-wrap grid h-16 grid-cols-[1fr_auto] items-center lg:grid-cols-[1fr_auto_1fr]">
         <Link href="/" className="flex items-center gap-2.5 justify-self-start">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-button text-sm font-semibold text-button-text">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-[10px] bg-button text-sm font-semibold text-button-text">
             G
           </span>
           <span className="hidden text-sm font-medium tracking-[-0.01em] text-text sm:inline">
@@ -39,7 +39,7 @@ export function Header() {
                   >
                     {item.label}
                     {current ? (
-                      <span className="absolute right-0 -bottom-1.5 left-0 h-px bg-text" />
+                      <span className="absolute right-1 -bottom-2 left-1 h-px bg-text" />
                     ) : null}
                   </Link>
                 </li>

@@ -15,15 +15,13 @@ export function SectionHeading({
     <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-3xl">
         {eyebrow ? (
-          <p className="text-xs font-medium tracking-[0.14em] text-secondary uppercase">
-            {eyebrow}
-          </p>
+          <p className="eyebrow">{eyebrow}</p>
         ) : null}
         <Title
-          className={`font-serif font-medium tracking-[-0.03em] text-balance text-text ${
+          className={`font-semibold tracking-[-0.045em] text-balance text-text ${
             as === "h1"
-              ? "text-[clamp(2.4rem,4.5vw,3.75rem)] leading-[1.08]"
-              : "text-[clamp(2rem,3.5vw,3rem)] leading-[1.12]"
+              ? "page-title"
+              : "text-[clamp(1.85rem,2.4vw,2.25rem)] leading-tight"
           } ${eyebrow ? "mt-3" : ""}`}
         >
           {title}

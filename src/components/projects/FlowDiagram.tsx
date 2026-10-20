@@ -2,24 +2,28 @@ import type { FlowNode } from "@/types/content";
 
 export function FlowDiagram({
   nodes,
-  compact = false,
+  tone = "light",
 }: {
   nodes: FlowNode[];
-  compact?: boolean;
+  tone?: "light" | "onDark";
 }) {
-  const visible = compact ? nodes.slice(0, 3) : nodes;
-
-  if (compact) {
+  if (tone === "onDark") {
     return (
-      <ol className="flex h-full flex-col justify-center gap-3 px-6 py-6">
-        {visible.map((node, index) => (
-          <li key={node.title} className="flex items-baseline gap-3">
-            <span className="w-6 shrink-0 font-mono text-[11px] text-secondary">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <span className="text-lg font-medium tracking-[-0.02em] text-text">
-              {node.title}
-            </span>
+      <ol className="flex flex-col gap-3 lg:flex-row lg:items-stretch">
+        {nodes.map((node, index) => (
+          <li key={node.title} className="flex min-w-0 flex-1 flex-col gap-3 lg:flex-row lg:items-stretch">
+            <div className="flex-1 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4">
+              <h3 className="text-sm font-medium text-white">{node.title}</h3>
+              <p className="mt-1.5 text-xs leading-5 text-white/65">{node.detail}</p>
+            </div>
+            {index < nodes.length - 1 ? (
+              <span
+                className="self-center text-sm text-white/40"
+                aria-hidden
+              >
+                →
+              </span>
+            ) : null}
           </li>
         ))}
       </ol>
@@ -28,7 +32,7 @@ export function FlowDiagram({
 
   return (
     <ol className="grid gap-3 sm:grid-cols-2">
-      {visible.map((node, index) => (
+      {nodes.map((node, index) => (
         <li
           key={node.title}
           className="rounded-2xl border border-border bg-surface px-4 py-4"

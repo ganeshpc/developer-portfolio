@@ -1,6 +1,7 @@
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { getFeaturedProjects } from "@/data/projects";
-import Link from "next/link";
 
 export function FeaturedProjects() {
   const projects = getFeaturedProjects();
@@ -9,21 +10,20 @@ export function FeaturedProjects() {
     <section id="work" className="scroll-mt-24">
       <div className="flex items-end justify-between gap-4">
         <div>
-          <p className="text-[11px] font-medium tracking-[0.16em] text-secondary uppercase">
-            Featured projects
-          </p>
-          <h2 className="mt-2 font-serif text-[clamp(1.8rem,3vw,2.4rem)] leading-tight font-medium tracking-[-0.03em] text-text">
+          <p className="eyebrow">Featured projects</p>
+          <h2 className="mt-3 text-[clamp(1.85rem,2.4vw,2.25rem)] leading-tight font-semibold tracking-[-0.04em] text-text">
             Some things I&apos;ve built
           </h2>
         </div>
         <Link
           href="/projects"
-          className="shrink-0 text-sm font-medium text-accent"
+          className="mb-1 inline-flex shrink-0 items-center gap-1 text-sm font-medium text-accent"
         >
           View all projects
+          <ArrowRight className="h-4 w-4" strokeWidth={1.75} aria-hidden />
         </Link>
       </div>
-      <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <li key={project.slug}>
             <ProjectCard project={project} />

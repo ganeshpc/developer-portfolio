@@ -12,10 +12,8 @@ type ButtonProps = {
 };
 
 const variants = {
-  primary:
-    "bg-button text-button-text hover:opacity-90 border border-transparent",
-  secondary:
-    "border border-border bg-surface text-text hover:bg-surface-secondary",
+  primary: "border border-transparent bg-button text-button-text hover:opacity-90",
+  secondary: "border border-border bg-surface text-text hover:bg-surface-secondary",
   text: "h-auto rounded-none border-0 bg-transparent px-0 text-accent hover:opacity-80",
 };
 
@@ -38,13 +36,13 @@ export function Button({
 
   const content = (
     <>
-      {icon === "download" ? <DownloadIcon /> : null}
       {children}
+      {icon === "download" ? <DownloadIcon /> : null}
       {icon === "arrow" ? (
-        <ArrowRight className="h-4 w-4" strokeWidth={1.5} aria-hidden />
+        <ArrowRight className="h-4 w-4" strokeWidth={1.75} aria-hidden />
       ) : null}
       {icon === "external" ? (
-        <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} aria-hidden />
+        <ArrowUpRight className="h-4 w-4" strokeWidth={1.75} aria-hidden />
       ) : null}
     </>
   );

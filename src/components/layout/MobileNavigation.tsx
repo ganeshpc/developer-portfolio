@@ -79,7 +79,7 @@ export function MobileNavigation() {
         <nav
           ref={panelRef}
           id={panelId}
-          className="fixed inset-x-0 top-14 z-30 border-b border-border bg-page shadow-[0_12px_30px_rgba(15,23,42,0.06)]"
+          className="fixed inset-x-0 top-16 z-30 border-b border-border bg-page shadow-[0_12px_30px_rgba(15,23,42,0.06)]"
         >
           <ul className="page-wrap flex flex-col py-2">
             {navItems.map((item) => {

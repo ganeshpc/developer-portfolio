@@ -13,12 +13,8 @@ export default function BlogPage() {
   return (
     <section className="section">
       <div className="page-wrap">
-        <p className="text-xs font-medium tracking-[0.14em] text-secondary uppercase">
-          Notes
-        </p>
-        <h1 className="mt-3 font-serif text-[clamp(2.4rem,4.5vw,3.75rem)] leading-[1.05] font-medium tracking-[-0.03em] text-text">
-          Writing, when it is ready.
-        </h1>
+        <p className="eyebrow">Notes</p>
+        <h1 className="page-title mt-3 text-text">Writing, when it is ready.</h1>
         {posts.length === 0 ? (
           <div className="mt-8 max-w-xl">
             <p className="text-base leading-7 text-secondary sm:text-lg">
@@ -46,7 +42,7 @@ export default function BlogPage() {
                   <span aria-hidden> · </span>
                   {post.readingMinutes} min read
                 </p>
-                <h2 className="mt-2 text-2xl font-medium tracking-[-0.02em] text-text">
+                <h2 className="mt-2 text-2xl font-semibold tracking-[-0.03em] text-text">
                   {post.title}
                 </h2>
                 <p className="mt-3 max-w-2xl text-base leading-7 text-secondary">

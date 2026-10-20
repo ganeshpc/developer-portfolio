@@ -1,6 +1,6 @@
 function Frame({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-full items-center justify-center bg-[#F7F8FB] p-4">
+    <div className="absolute inset-0 flex items-center justify-center bg-[#F7F8FB] p-4">
       {children}
     </div>
   );

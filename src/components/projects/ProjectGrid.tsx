@@ -29,7 +29,7 @@ export function ProjectGrid() {
               aria-checked={selected}
               className={`h-11 rounded-full px-4 text-sm transition-colors duration-200 ${
                 selected
-                  ? "bg-accent-subtle text-accent"
+                  ? "bg-button text-button-text"
                   : "text-secondary hover:bg-surface-secondary hover:text-text"
               }`}
               onClick={() => setFilter(item.id)}

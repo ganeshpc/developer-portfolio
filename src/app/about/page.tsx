@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 import { coursework, education, profile, skillGroups } from "@/data/profile";
 import { publicPath, siteUrl } from "@/lib/site";
 
@@ -15,15 +16,13 @@ export default function AboutPage() {
   return (
     <article className="section">
       <div className="page-wrap">
-        <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12">
           <div>
-            <p className="text-xs font-medium tracking-[0.14em] text-secondary uppercase">
-              About
-            </p>
-            <h1 className="mt-3 max-w-[16ch] font-serif text-[clamp(2.4rem,4.5vw,3.75rem)] leading-[1.05] font-medium tracking-[-0.03em] text-balance text-text">
+            <p className="eyebrow">About</p>
+            <h1 className="page-title mt-3 max-w-[16ch] text-balance text-text">
               I like software that stays understandable when it fails.
             </h1>
-            <div className="mt-6 max-w-xl space-y-4 text-base leading-7 text-secondary sm:text-lg sm:leading-8">
+            <div className="mt-6 max-w-xl space-y-4 text-[15px] leading-7 text-secondary sm:text-base sm:leading-7">
               <p>
                 Most of my work is the server side of a product: batch jobs,
                 file services, REST APIs, and the data those APIs have to keep
@@ -37,25 +36,28 @@ export default function AboutPage() {
                 boundary.
               </p>
             </div>
+            <div className="mt-7">
+              <Button href="/experience" variant="secondary" icon="arrow">
+                Read the experience
+              </Button>
+            </div>
           </div>
-          <figure className="lg:pt-10">
-            <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-2xl">
+          <figure>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[24px]">
               <Image
-                src={publicPath("/images/portrait.jpg")}
-                alt="Portrait of Ganesh Chincholkar."
+                src={publicPath("/images/workspace.jpg")}
+                alt="A wooden desk by a window, with a laptop, notebook, cup, and plant."
                 fill
-                sizes="(min-width: 1024px) 420px, 100vw"
-                className="object-cover object-[center_15%]"
+                sizes="(min-width: 1024px) 460px, 100vw"
+                className="object-cover object-[68%_45%]"
               />
             </div>
-            <figcaption className="mt-3 text-sm text-secondary">
-              {profile.location}
-            </figcaption>
+            <figcaption className="mt-3 text-sm text-secondary">{profile.location}</figcaption>
           </figure>
         </div>
 
         <section className="mt-20 max-w-3xl lg:mt-28">
-          <h2 className="text-2xl font-medium tracking-[-0.02em] text-text">
+          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-text">
             How I work
           </h2>
           <div className="mt-4 space-y-4 text-base leading-7 text-secondary">
@@ -84,7 +86,7 @@ export default function AboutPage() {
         </section>
 
         <section className="mt-16 max-w-3xl">
-          <h2 className="text-2xl font-medium tracking-[-0.02em] text-text">
+          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-text">
             Career
           </h2>
           <div className="mt-4 space-y-4 text-base leading-7 text-secondary">
@@ -110,7 +112,7 @@ export default function AboutPage() {
         </section>
 
         <section className="mt-16">
-          <h2 className="text-2xl font-medium tracking-[-0.02em] text-text">
+          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-text">
             Technical skills
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-secondary">
@@ -130,7 +132,7 @@ export default function AboutPage() {
         </section>
 
         <section className="mt-16 max-w-3xl">
-          <h2 className="text-2xl font-medium tracking-[-0.02em] text-text">
+          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-text">
             Learning in public
           </h2>
           <p className="mt-4 text-base leading-7 text-secondary">

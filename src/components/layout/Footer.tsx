@@ -9,7 +9,7 @@ const links = [
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="page-wrap flex flex-col gap-6 py-10 sm:flex-row sm:items-end sm:justify-between">
+      <div className="page-wrap flex flex-col gap-6 py-8 sm:flex-row sm:items-end sm:justify-between sm:py-10">
         <div>
           <p className="text-sm text-text">{profile.name}</p>
           <p className="mt-1 max-w-md text-sm leading-6 text-secondary">
