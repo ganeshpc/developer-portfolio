@@ -26,10 +26,6 @@ export default function ExperiencePage() {
               Download résumé
             </Button>
           </div>
-          <p className="mt-4 max-w-2xl text-sm leading-6 text-secondary sm:text-[15px] sm:leading-7">
-            Four roles, newest first. The notes follow the résumé. Where a
-            percentage appears, it is the figure printed there.
-          </p>
           <div className="mt-10">
             <ExperienceList roles={experience} detailed />
           </div>

@@ -10,7 +10,7 @@ export function TechnologyList({
       {items.map((item) => (
         <li
           key={item}
-          className={`rounded-full px-2.5 py-1 text-[11px] ${
+          className={`rounded-full px-2.5 py-1 text-[11px] whitespace-nowrap ${
             tone === "onDark"
               ? "bg-white/10 text-white/85"
               : "bg-surface-secondary text-secondary"

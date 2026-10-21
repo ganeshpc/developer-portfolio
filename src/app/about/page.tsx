@@ -93,9 +93,9 @@ export default function AboutPage() {
             <p>
               Most recently I was a fullstack engineering specialist at xAI, from
               January to September 2026. Before that I was a Java fullstack
-              developer at Citi, a software engineer at Siemens Industry
-              Software from July 2021 to June 2025, and a fullstack intern at
-              Inkoop in the first half of 2021.
+              developer at Citi from June 2025, a software engineer at Siemens
+              Industry Software from July 2021 to June 2025, and a fullstack
+              intern at Inkoop from January to June 2021.
             </p>
             <p>
               {education.credential} at {education.school}, {education.period},
@@ -115,17 +115,22 @@ export default function AboutPage() {
           <h2 className="text-2xl font-semibold tracking-[-0.03em] text-text">
             Technical skills
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-secondary">
-            The groups below are the ones on the résumé. The last group is
-            tools named in the role descriptions rather than in that list.
-          </p>
-          <ul className="mt-6 grid gap-8 sm:grid-cols-2">
+          <ul className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2">
             {skillGroups.map((group) => (
               <li key={group.title} className="border-t border-border pt-4">
-                <h3 className="text-base font-medium text-text">{group.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-secondary">
-                  {group.items.join(", ")}
-                </p>
+                <h3 className="text-base font-semibold tracking-[-0.01em] text-text">
+                  {group.title}
+                </h3>
+                <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="text-sm leading-6 text-secondary after:ml-3 after:text-border after:content-['·'] last:after:content-none"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
@@ -140,16 +145,16 @@ export default function AboutPage() {
             pipeline, a key-value store, a price tracker, and a planning-poker
             app a team can open in a browser.
           </p>
-          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm">
             <li>
-              <Link href="/projects" className="text-accent">
+              <Link href="/projects" className="inline-flex h-11 items-center font-medium text-accent">
                 Projects
               </Link>
             </li>
             <li>
               <a
                 href={profile.github}
-                className="text-accent"
+                className="inline-flex h-11 items-center font-medium text-accent"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -159,7 +164,7 @@ export default function AboutPage() {
             <li>
               <a
                 href={profile.linkedin}
-                className="text-accent"
+                className="inline-flex h-11 items-center font-medium text-accent"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -169,7 +174,7 @@ export default function AboutPage() {
             <li>
               <a
                 href={profile.x}
-                className="text-accent"
+                className="inline-flex h-11 items-center font-medium text-accent"
                 target="_blank"
                 rel="noopener noreferrer"
               >

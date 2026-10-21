@@ -51,8 +51,12 @@ export const capabilities = [
   },
 ] as const;
 
-/** Skill groups as printed on the October 2026 résumé. */
+/** Skill groups follow the résumé, then tools named in the roles. */
 export const skillGroups = [
+  {
+    title: "AI training",
+    items: ["Coding-data creation", "Programming problem solving", "Technical reasoning"],
+  },
   {
     title: "Languages",
     items: ["Java", "JavaScript", "TypeScript", "Python"],
@@ -66,16 +70,16 @@ export const skillGroups = [
     items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase"],
   },
   {
-    title: "From the roles",
+    title: "In the roles",
     items: ["Spring Batch", "Docker", "Jest", "BullMQ", "Vue", "Stripe"],
   },
 ] as const;
 
 export const coursework = [
+  "Engineering Mathematics I–III",
   "Data Structures and Algorithms",
   "Object Oriented Programming",
   "Advanced Data Structures",
   "Database Management Systems",
   "System Design",
-  "Engineering Mathematics",
 ] as const;

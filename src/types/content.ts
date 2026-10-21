@@ -41,7 +41,8 @@ export type Role = {
   company: string;
   title: string;
   start: string;
-  end: string;
+  /** Omitted when the résumé prints a start and no end month. */
+  end?: string;
   location?: string;
   logo: string;
   summary: string;
